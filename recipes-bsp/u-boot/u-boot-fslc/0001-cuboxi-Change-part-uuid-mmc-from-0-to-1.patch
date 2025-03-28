@@ -1,0 +1,25 @@
+From 69a65884899319661e4cdf3dffe9587cfb76be01 Mon Sep 17 00:00:00 2001
+From: Siva Balasubramanian <siva.balasubramanian@timesys.com>
+Date: Thu, 27 Mar 2025 15:17:45 +0530
+Subject: [PATCH] cuboxi: Change part uuid mmc from 0 to 1
+
+---
+ include/configs/mx6cuboxi.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/include/configs/mx6cuboxi.h b/include/configs/mx6cuboxi.h
+index a6690367f8..86b1624e0b 100644
+--- a/include/configs/mx6cuboxi.h
++++ b/include/configs/mx6cuboxi.h
+@@ -70,7 +70,7 @@
+ 	"console=" CONSOLE_DEV ",115200\0" \
+ 	"bootm_size=0x10000000\0" \
+ 	"mmcdev=" __stringify(CONFIG_SYS_MMC_ENV_DEV) "\0" \
+-	"finduuid=part uuid mmc 0:1 uuid\0" \
++	"finduuid=part uuid mmc 1:1 uuid\0" \
+ 	"update_sd_firmware=" \
+ 		"if test ${ip_dyn} = yes; then " \
+ 			"setenv get_cmd dhcp; " \
+-- 
+2.34.1
+
